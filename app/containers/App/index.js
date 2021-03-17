@@ -12,7 +12,11 @@ import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
 import HomePage from 'containers/HomePage/Loadable';
+import ProfilePage from 'containers/HomePage/Loadable';
+import StartPage from 'containers/HomePage/Loadable';
+import ServicePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
+import '../../styles/index.css';
 
 export default function App() {
   return (
@@ -25,6 +29,9 @@ export default function App() {
       </Helmet>
       <Switch>
         <Route exact path="/" component={HomePage} />
+        <Route exact path="/started" component={StartPage} />
+        <Route exact path="/profile" component={ProfilePage} />
+        <Route exact path="/service" component={ServicePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
     </>
